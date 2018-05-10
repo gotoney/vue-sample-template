@@ -1,8 +1,12 @@
 <template>
     <div class="hello-container">
         <button :class="btn" @click="up">UP</button>
-        <el-button @click="visible = true">Click</el-button>
-        <el-dialog :visible.sync="visible" title="Hello"></el-dialog>
+        <button @click="visible = true">Click</button>
+        <el-dialog :visible.sync="visible" title="Hello"></el-dialog><hr/>
+        <div>
+            <input type="text" value="10" id="a" ref="a"/> + <input type="text" value="20" id="b" ref="b"/>
+            <button @click="method1()">=</button><input type="text" ref="c"/>
+        </div>
     </div>
 </template>
 <script>
@@ -17,6 +21,10 @@
         methods: {
             up(){
                 alert("UP CLICK.")
+            },
+            method1(){
+                let a = this.$refs.a.value, b = this.$refs.b.value
+                this.$refs.c.value = Number(a) + Number(b)
             }
         }
     }

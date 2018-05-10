@@ -11,7 +11,8 @@ module.exports = {
     },
     externals: {
         'vue': "Vue",
-        'vue-i18n': 'VueI18n'
+        'vue-i18n': 'VueI18n',
+        'vue-router': 'VueRouter'
     },
     resolve: {
         extensions: ['.js', '.vue', '.json'],
@@ -21,7 +22,8 @@ module.exports = {
         ],
         alias: {
             'vue$': 'vue/dist/vue.js',
-            'vue-i18n$': 'vue-i18n/dist/vue-i18n',
+            'vue-i18n$': 'vue-i18n/dist/vue-i18n.js',
+            'vue-router$': 'vue-router/dist/vue-router.js',
             '@': path.resolve('src')
         }
     },
